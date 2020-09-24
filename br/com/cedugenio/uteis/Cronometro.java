@@ -46,7 +46,7 @@ public class Cronometro {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(!rodando) {	
-				Timer timer = new Timer();
+				timer = new Timer();
 				rodando = true;
 				
 				timer.scheduleAtFixedRate(new TimerTask() {
@@ -56,7 +56,7 @@ public class Cronometro {
 						int segundo = contador % 60;
 						int minuto = contador / 60; 
 						int hora = minuto / 60;
-						    minuto %= 60;
+						minuto %= 60;
 						
 						contadorTempo.setText(String.format("%02d:%02d:%02d", hora,minuto,segundo));
 					}
